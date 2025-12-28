@@ -13,7 +13,7 @@ CattleTrack Mobile is the Android counterpart to the CattleTrack ecosystem. Whil
 ---
 
 ### 🛠️ Tech Stack
-* **Language:** Java / Kotlin (Update based on your project)
+* **Language:** Java
 * **Platform:** Android SDK
 * **Architecture:** Based on professional software engineering patterns for mobile.
 * **Tools:** Git, Android Studio (Development), Postman (API Testing).
