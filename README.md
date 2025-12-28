@@ -30,7 +30,7 @@ CattleTrack Mobile is the Android counterpart to the CattleTrack ecosystem. Whil
 ### ⚙️ How to Explore the Code
 Since this is a portfolio piece, you can explore the source code to review:
 * **UI/UX Implementation:** Check the `res/layout` folders for the XML designs.
-* **Business Logic:** Review the main activities and adapters in the `java/` or `kotlin/` directories.
+* **Business Logic:** Review the main activities and adapters in the `java/` directories.
 
 ---
 
