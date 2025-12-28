@@ -1,0 +1,7 @@
+<!-- res/drawable/fondo_circulo_rojo.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid android:color="#b45c58" />  <!-- Color de fondo rojo -->
+
+</shape>

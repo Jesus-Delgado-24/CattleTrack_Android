@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 1. Empuja el borde marrón hacia abajo para dejar espacio para el hint -->
+    <item android:top="8dp">
+        <shape android:shape="rectangle">
+            <!-- Esto crea un borde marrón -->
+            <solid android:color="#774833" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+    <!-- 2. Empuja el fondo blanco un poco más para que el borde superior sea visible -->
+    <item
+        android:left="2dp"
+        android:right="2dp"
+        android:top="10dp"
+        android:bottom="4dp"> <!-- El borde inferior es más grueso -->
+        <shape android:shape="rectangle">
+            <!-- Esto crea el fondo blanco interior -->
+            <solid android:color="@android:color/white" />
+            <corners android:radius="10dp" />
+            <!-- La etiqueta <padding> se ha eliminado de aquí -->
+        </shape>
+    </item>
+</layer-list>

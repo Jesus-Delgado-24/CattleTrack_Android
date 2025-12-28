@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_principal"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".views.FragmentHistorialReproduccion">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historial de reproducción"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"/>
+
+    <FrameLayout
+        android:id="@+id/contenedorHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/fondo_principal"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAgregarHistorial"
+        style="@style/letra_base_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_seleccion2"
+        android:text="Agregar"
+        android:textAllCaps="false" />
+
+</LinearLayout>

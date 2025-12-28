@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_borde_redondo"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/btn_cancelar_P"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/fondo_circulo_rojo"
+        android:elevation="4dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:tint="@android:color/white"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_cancelar_P"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- ===== ID INVISIBLE (POSICIÓN CORREGIDA) ===== -->
+        <TextView
+            android:id="@+id/lblAlertProduccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:textColor="@color/cancelar"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="¿Deseas eliminar este registro?" />
+
+        <Spinner
+            android:id="@+id/spinner_idSector_P"
+            style="@style/MiEstiloEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/spin_disenio"
+            android:minHeight="48dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:spinnerMode="dropdown" />
+
+        <!-- ===== CAMPO DE CANTIDAD ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Cantidad (lts)"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="#774833">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_cantidad_P"
+                style="@style/letra_base"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/txt_disenio"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ===== CAMPO DE FECHA ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtFechaVisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Fecha de producción"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="#774833"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_fecha_P"
+                style="@style/letra_base"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/txt_disenio"
+                android:cursorVisible="false"
+                android:focusable="false"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancelar_P2"
+                style="@style/letra_base_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_seleccion2"
+                android:text="Cancelar"
+                android:visibility="gone"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Eliminar_P"
+                style="@style/letra_base_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_seleccion2"
+                android:backgroundTint="@color/cancelar"
+                android:text="Eliminar"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

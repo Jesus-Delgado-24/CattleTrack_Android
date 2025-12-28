@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".views.MonitoreoDetailFragment">
+
+        <TextView
+            android:id="@+id/textViewDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalle del Monitoreo"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDetailGanadoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Clave Ganado:"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDetailTitle" />
+
+        <TextView
+            android:id="@+id/textViewDetailGanado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#555555"
+            app:layout_constraintBaseline_toBaselineOf="@id/textViewDetailGanadoLabel"
+            app:layout_constraintStart_toEndOf="@id/textViewDetailGanadoLabel"
+            tools:text="5" />
+
+        <TextView
+            android:id="@+id/textViewDetailFechaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Fecha y Hora:"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDetailGanadoLabel" />
+
+        <TextView
+            android:id="@+id/textViewDetailFecha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#555555"
+            app:layout_constraintBaseline_toBaselineOf="@id/textViewDetailFechaLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewDetailFechaLabel"
+            tools:text="2024-03-30T12:00:00" />
+
+        <!-- === INICIO DE CAMPOS DE TEXTO ACTUALIZADOS === -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutTemperatura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Temperatura (°C)"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="#774833"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDetailFechaLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextTemperatura"
+                style="@style/letra_base"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/txt_disenio"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutFreqCardiaca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Frecuencia Cardíaca (lpm)"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="#774833"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutTemperatura">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextFreqCardiaca"
+                style="@style/letra_base"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/txt_disenio"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutFreqRespiratoria"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Frecuencia Respiratoria"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="#774833"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutFreqCardiaca">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextFreqRespiratoria"
+                style="@style/letra_base"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/txt_disenio"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutDeshidratacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Nivel de Deshidratación"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="#774833"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutFreqRespiratoria">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDeshidratacion"
+                style="@style/letra_base"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/txt_disenio"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutDesglose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Desglose (observaciones)"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="#774833"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutDeshidratacion">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDesglose"
+                style="@style/letra_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_disenio"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minLines="4"
+                android:paddingTop="16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- === FIN DE CAMPOS DE TEXTO ACTUALIZADOS === -->
+
+        <TextView
+            android:id="@+id/textViewHistorialLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Historial de Enfermedades (Solo Lectura):"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayoutDesglose" />
+
+        <TextView
+            android:id="@+id/textViewHistorialEnfermedades"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/txt_login"
+            android:gravity="top"
+            android:minHeight="80dp"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewHistorialLabel"
+            tools:text="ID: 3, Fecha: 2024-03-20\nID: 4, Fecha: 2024-03-12" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonGuardar"
+            style="@style/letra_base_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_seleccion2"
+            android:text="Guardar Cambios"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewHistorialEnfermedades" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

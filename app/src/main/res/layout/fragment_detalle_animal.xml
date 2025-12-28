@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.DetalleAnimalFragment"
+    android:background="@color/fondo_principal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalles del Animal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ===== CAMPO Clave Ganado MODIFICADO ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Clave Ganado"
+            app:hintTextColor="#774833"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextId"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:inputType="text"
+                android:background="@drawable/txt_disenio"
+                style="@style/letra_base" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ===== CAMPO Temperatura MODIFICADO ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Temperatura"
+            app:hintTextColor="#774833"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextRaza"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:inputType="numberDecimal"
+                android:background="@drawable/txt_disenio"
+                style="@style/letra_base" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ===== CAMPO Fecha_Hora MODIFICADO ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Fecha_Hora"
+            app:hintTextColor="#774833"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextFechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:inputType="datetime"
+                android:background="@drawable/txt_disenio"
+                style="@style/letra_base" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ===== CAMPO Frecuencia_Cardiaca MODIFICADO ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Frecuencia_Cardiaca"
+            app:hintTextColor="#774833"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPeso"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:inputType="numberDecimal"
+                android:background="@drawable/txt_disenio"
+                style="@style/letra_base" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ===== CAMPO Observaciones MODIFICADO ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Observaciones / Estado de Salud"
+            app:hintTextColor="#774833"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextObservaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:gravity="top"
+                android:background="@drawable/txt_disenio"
+                style="@style/letra_base" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Guardar Cambios"
+            android:layout_marginTop="32dp"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_seleccion2"
+            style="@style/letra_base_btn" />
+
+    </LinearLayout>
+</ScrollView>

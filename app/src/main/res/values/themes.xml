@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CattleTrack" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/brown_normal</item>
+        <item name="colorPrimaryVariant">@color/brown_dark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="cursorColor">@color/black</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.CattleTrack" parent="Base.Theme.CattleTrack" />
+
+    <style name="MiEstiloEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/borde_redondeado</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">#888888</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MiEstiloIndicador" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/brown_light</item>
+    </style>
+</resources>

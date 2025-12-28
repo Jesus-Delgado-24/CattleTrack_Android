@@ -1,0 +1,9 @@
+# Archivos y carpetas de Android Studio / IntelliJ
+/.idea
+*.iml
+.gradle
+/local.properties
+
+# Carpetas de compilación
+/build
+/app/build

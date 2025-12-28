@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Sector -->
+        <TextView
+            android:id="@+id/txtSector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sector: A1"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Alimento -->
+        <TextView
+            android:id="@+id/txtAlimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alimento: Maíz"
+            android:textColor="#424242"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Cantidad -->
+        <TextView
+            android:id="@+id/txtCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cantidad: 50 kg"
+            android:textColor="#7a6155"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Fecha -->
+        <TextView
+            android:id="@+id/txtFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha: 2025-11-04"
+            android:textColor="#616161"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Botón Editar -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Editar"
+            android:textSize="14sp"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/btn_seleccion3"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

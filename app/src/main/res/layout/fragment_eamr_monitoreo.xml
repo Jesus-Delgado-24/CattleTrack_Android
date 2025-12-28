@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_principal"
+    tools:context=".views.eamr_monitoreo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- ID GANADO -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="ID del ganado">
+
+                <Spinner
+                    android:id="@+id/spinner_ganado"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/txt_disenio"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- TEMPERATURA -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Temperatura">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_temperatura"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/txt_disenio"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- FRECUENCIA CARDIACA -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Frecuencia cardiaca">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_frecuencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/txt_disenio"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- NIVEL DESHIDRATACION -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Nivel de deshidratación">
+
+                <Spinner
+                    android:id="@+id/spinner_nivel_deshidratacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/txt_disenio"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- DESGLOSE (CheckBoxes más pequeños y más juntos) -->
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:layout_marginTop="6dp">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/chk_nutricion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chequeo nutricional"
+                    android:textSize="10sp"
+                    android:textColor="#774833"
+                    android:layout_marginTop="2dp"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/chk_estado_fisico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Evaluación estado físico"
+                    android:textSize="10sp"
+                    android:textColor="#774833"
+                    android:layout_marginTop="2dp"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/chk_historial_clinico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Revisión historial clínico"
+                    android:textSize="10sp"
+                    android:textColor="#774833"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+
+            <!-- BOTON AGREGAR ENFERMEDAD -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_agregar_enfermedad"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:text="Agregar enfermedad"
+                android:background="@drawable/btn_seleccion2"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"/>
+
+            <!-- LISTA ENFERMEDADES -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listView"
+                android:layout_width="300dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                tools:listitem="@layout/item_enfermedad"/>
+
+            <!-- BOTONES GUARDAR / CANCELAR -->
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_cancelar"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:text="Cancelar"
+                    android:background="@drawable/btn_seleccion3"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_guardar"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:text="Guardar"
+                    android:background="@drawable/btn_seleccion2"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

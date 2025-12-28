@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_principal"
+    android:padding="24dp"
+    tools:context=".views.AbastecerFragment">
+
+    <!-- Spinner Sector -->
+    <Spinner
+        android:id="@+id/spinnerSector"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/spin_disenio"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/MiEstiloEditText" />
+
+    <!-- Spinner Alimento -->
+    <Spinner
+        android:id="@+id/spinnerAlimento"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/spin_disenio"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSector"
+        style="@style/MiEstiloEditText" />
+
+    <!-- LinearLayout Fecha y Cantidad -->
+    <LinearLayout
+        android:id="@+id/layoutFechaCantidad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerAlimento">
+
+        <!-- ===== CAMPO DE FECHA MODIFICADO ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:hint="Fecha"
+            app:hintTextColor="#774833"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tvFecha"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                style="@style/letra_base"
+                android:background="@drawable/txt_disenio"
+                android:clickable="true"
+                android:focusable="false"
+                android:cursorVisible="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ===== CAMPO DE CANTIDAD MODIFICADO ===== -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:hint="Cantidad"
+            app:hintTextColor="#774833"
+            android:textColorHint="#A0A0A0"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                style="@style/letra_base"
+                android:background="@drawable/txt_disenio"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Botón Abastecer -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAbastecer"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btn_seleccion3"
+        style="@style/letra_base_btn"
+        android:text="Abastecer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutFechaCantidad"
+        android:textAllCaps="false" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAbastecer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

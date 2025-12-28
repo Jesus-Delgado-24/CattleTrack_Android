@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <!-- Se cambia el LinearLayout principal a horizontal para alinear el contenido y el botón -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <!-- Este LinearLayout vertical contendrá todos los textos -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- ID del Registro (pequeño y discreto) -->
+            <TextView
+                android:id="@+id/lblId_LL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clave: 123"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+
+            <!-- ID del Sector -->
+            <TextView
+                android:id="@+id/lblId_SL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Sector: A-05"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Cantidad Producida -->
+            <TextView
+                android:id="@+id/lblCantidadL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cantidad: 500 L"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <!-- Fecha de Producción -->
+            <TextView
+                android:id="@+id/lblFechaL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha: 2024-10-26"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnDelL"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_delete" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
